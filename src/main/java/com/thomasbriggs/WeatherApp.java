@@ -9,8 +9,8 @@ import com.google.gson.Gson;
 /**
  * Hello world!
  */
-public final class App {
-    App() {
+public final class WeatherApp {
+    WeatherApp() {
     }
 
     /**
