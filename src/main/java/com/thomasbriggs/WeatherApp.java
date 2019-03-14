@@ -46,7 +46,7 @@ public final class WeatherApp {
         inputLine = reader2.readLine();
         WeatherData weatherData = gson.fromJson(inputLine, WeatherData.class);
         System.out.println("Weather");
-        System.out.println(weatherData.currently.summary);
+        System.out.println(weatherData.geCurrently().getSummary());
     }
 }
 
@@ -68,12 +68,16 @@ class Location
 
 class WeatherData
 {
-    Currently currently;
+    private Currently currently;
+
+    public Currently geCurrently (){
+        return this.currently;
+    }
 }
 
 class Currently
 {
-    String summary;
+    private String summary;
     String precipProbability;
     String visibility;
     String windGust;
@@ -92,4 +96,9 @@ class Currently
     String time;
     String windSpeed;
     String uvIndex;
+
+    public String getSummary ()
+    {
+        return this.summary;
+    }
 }
