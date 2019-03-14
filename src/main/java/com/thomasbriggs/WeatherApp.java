@@ -46,6 +46,7 @@ public final class WeatherApp {
         inputLine = reader2.readLine();
         WeatherData weatherData = gson.fromJson(inputLine, WeatherData.class);
         System.out.println("Weather");
+        System.out.println(weatherData.currently.summary);
     }
 }
 
