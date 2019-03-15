@@ -17,9 +17,7 @@ public final class WeatherApp {
     public static void main(String[] args) throws Exception {
 
         IpStacksApi ipStacksApi = new IpStacksApi();
-
-        Gson gson = new Gson();
-        LocationData locationData = gson.fromJson(ipStacksApi.request(), LocationData.class);
+        LocationData locationData = new Gson().fromJson(ipStacksApi.request(), LocationData.class);
         System.out.println("Location:");
         System.out.println(locationData.getIp());
         System.out.println(locationData.getLatitude());
@@ -31,7 +29,7 @@ public final class WeatherApp {
 
         DarkSkyApi darkSkyApi = new DarkSkyApi(locationData.getLongitude(), locationData.getLatitude());
 
-        WeatherData weatherData = gson.fromJson(darkSkyApi.request(), WeatherData.class);
+        WeatherData weatherData = new Gson().fromJson(darkSkyApi.request(), WeatherData.class);
         System.out.println("Weather");
         System.out.println(weatherData.getCurrently().getSummary());
     }
