@@ -4,7 +4,17 @@ public class WeatherData
 {
     private Currently currently;
 
-    public Currently geCurrently (){
-        return this.currently;
+    /**
+     * @return the currently
+     */
+    public Currently getCurrently() {
+        return currently;
+    }
+
+    /**
+     * @param currently the currently to set
+     */
+    public void setCurrently(Currently currently) {
+        this.currently = currently;
     }
 }
