@@ -6,7 +6,7 @@ import java.net.URL;
 import com.google.gson.Gson;
 
 
-import com.thomasbriggs.json.*;
+import com.thomasbriggs.json.LocationData;;
 
 /**
  * Hello world!
