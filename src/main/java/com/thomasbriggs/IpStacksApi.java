@@ -5,25 +5,22 @@ import java.io.InputStreamReader;
 import java.net.URL;
 
 public class IpStacksApi {
-    private String BaseUrl;
-    private String ApiKey;
+    private String BaseUrl = "http://api.ipstack.com/";
+    private String ApiKey = "017418ecb45684b0270b066730aa5df7";
     private String Params;
 
     public IpStacksApi(String params) {
-        this.BaseUrl = "http://api.ipstack.com/";
-        this.ApiKey = "?access_key=017418ecb45684b0270b066730aa5df7";
         this.Params = params;
     }
 
     public IpStacksApi() {
-        this.BaseUrl = "http://api.ipstack.com/";
-        this.ApiKey = "?access_key=017418ecb45684b0270b066730aa5df7";
         this.Params = "check";
     }
 
     public String request() throws Exception {
 
-        URL url = new URL(this.BaseUrl + this.Params + this.ApiKey);
+        //Example URL: http://api.ipstack.com/82.7.48.121?access_key=017418ecb45684b0270b066730aa5df7
+        URL url = new URL(this.BaseUrl + this.Params + "?access_key=" + this.ApiKey);
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
 

@@ -28,9 +28,8 @@ public final class WeatherApp {
         System.out.println(locationData.getLocation().getCountry_flag_emoji());
 
         DarkSkyApi darkSkyApi = new DarkSkyApi(locationData.getLongitude(), locationData.getLatitude());
-
         WeatherData weatherData = new Gson().fromJson(darkSkyApi.request(), WeatherData.class);
-        System.out.println("Weather");
+        System.out.println("Weather:");
         System.out.println(weatherData.getCurrently().getSummary());
     }
 }
