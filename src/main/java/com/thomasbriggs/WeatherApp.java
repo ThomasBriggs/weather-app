@@ -31,5 +31,6 @@ public final class WeatherApp {
         WeatherData weatherData = new Gson().fromJson(darkSkyApi.request(), WeatherData.class);
         System.out.println("Weather:");
         System.out.println(weatherData.getCurrently().getSummary());
+        System.out.println(weatherData.getCurrently().getTemperature());
     }
 }

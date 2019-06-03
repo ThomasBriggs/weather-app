@@ -21,7 +21,7 @@ public class DarkSkyApi {
     public DarkSkyApi(String longitude, String latitude) {
         this.Latitude = latitude;
         this.Longitude = longitude;
-        this.Params = "";
+        this.Params = "?units=si";
 
     }
 
