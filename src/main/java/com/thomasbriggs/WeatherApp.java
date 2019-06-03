@@ -31,5 +31,6 @@ public final class WeatherApp {
         System.out.println("Weather:");
         System.out.println(weatherData.getCurrently().getSummary());
         System.out.println(weatherData.getCurrently().getTemperature());
+        System.out.println(weatherData.getCurrently().getIcon());
     }
 }
