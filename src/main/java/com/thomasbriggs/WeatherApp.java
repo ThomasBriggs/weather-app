@@ -1,7 +1,6 @@
 package com.thomasbriggs;
 
 import com.google.gson.Gson;
-
 import com.thomasbriggs.json.*;
 
 /**
