@@ -1,6 +1,7 @@
 package com.thomasbriggs;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.thomasbriggs.json.*;
 
 /**
@@ -12,8 +13,10 @@ public final class WeatherApp {
 
     /**
      * @param args The arguments of the program.
+     * @throws Exception
+     * @throws JsonSyntaxException
      */
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws JsonSyntaxException, Exception {
 
         IpStacksApi ipStacksApi = new IpStacksApi();
         LocationData locationData = new Gson().fromJson(ipStacksApi.request(), LocationData.class);
